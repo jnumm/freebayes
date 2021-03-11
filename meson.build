@@ -98,6 +98,7 @@ endif
 
 if not vcflib_dep.found()
   vcflib_inc = include_directories(
+    'vcflib',
     'vcflib/src',
     'vcflib/smithwaterman',
     'vcflib/multichoose',

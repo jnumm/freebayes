@@ -10,7 +10,7 @@
 #include "split.h"
 #include "Utility.h"
 #include "BedReader.h"
-#include "../intervaltree/IntervalTree.h"
+#include <intervaltree/IntervalTree.h>
 
 using namespace std;
 
