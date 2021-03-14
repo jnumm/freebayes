@@ -42,7 +42,7 @@ void Allele::update(int haplotypeLength) {
 }
 
 // quality of subsequence of allele
-const int Allele::subquality(int startpos, int len) const {
+int Allele::subquality(int startpos, int len) const {
     int start = startpos - position;
     int sum = 0;
     for (int i = start; i < len; ++i) {
@@ -52,11 +52,11 @@ const int Allele::subquality(int startpos, int len) const {
 }
 
 // quality of subsequence of allele
-const long double Allele::lnsubquality(int startpos, int len) const {
+long double Allele::lnsubquality(int startpos, int len) const {
     return phred2ln(subquality(startpos, len));
 }
 
-const int Allele::subquality(const Allele &a) const {
+int Allele::subquality(const Allele &a) const {
     int sum = 0;
     int rp = a.position - position;
     int l = a.length;
@@ -126,7 +126,7 @@ const int Allele::subquality(const Allele &a) const {
     return sum * (l / L);
 }
 
-const long double Allele::lnsubquality(const Allele& a) const {
+long double Allele::lnsubquality(const Allele& a) const {
     return phred2ln(subquality(a));
 }
 
@@ -137,7 +137,7 @@ void updateAllelesCachedData(vector<Allele*>& alleles) {
 }
 
 /*
-  const int Allele::basesLeft(void) const {
+  int Allele::basesLeft(void) const {
   if (type == ALLELE_REFERENCE) {
   return bpLeft + referenceOffset();
   } else {
@@ -145,7 +145,7 @@ void updateAllelesCachedData(vector<Allele*>& alleles) {
   }
   }
 
-  const int Allele::basesRight(void) const {
+  int Allele::basesRight(void) const {
   if (type == ALLELE_REFERENCE) {
   return bpRight - referenceOffset();
   } else {
@@ -155,7 +155,7 @@ void updateAllelesCachedData(vector<Allele*>& alleles) {
 */
 
 // quality at a given reference position
-const short Allele::currentQuality(void) const {
+short Allele::currentQuality(void) const {
     //cerr << readID << " " << position << "-" << position + length << " " << alternateSequence.size() << " vs " << baseQualities.size() << endl;
     switch (this->type) {
         case ALLELE_REFERENCE:
@@ -183,7 +183,7 @@ const short Allele::currentQuality(void) const {
     return 0;
 }
 
-const long double Allele::lncurrentQuality(void) const {
+long double Allele::lncurrentQuality(void) const {
     return phred2ln(currentQuality());
 }
 

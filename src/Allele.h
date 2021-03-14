@@ -246,12 +246,12 @@ public:
     bool isComplex(void) const; // true if type == ALLELE_COMPLEX
     bool isNull(void) const; // true if type == ALLELE_NULL
     int referenceOffset(void) const;
-    const short currentQuality(void) const;  // for getting the quality of a given position in multi-bp alleles
-    const long double lncurrentQuality(void) const;
-    const int subquality(int startpos, int len) const;
-    const long double lnsubquality(int startpos, int len) const;
-    const int subquality(const Allele &a) const;
-    const long double lnsubquality(const Allele &a) const;
+    short currentQuality(void) const;  // for getting the quality of a given position in multi-bp alleles
+    long double lncurrentQuality(void) const;
+    int subquality(int startpos, int len) const;
+    long double lnsubquality(int startpos, int len) const;
+    int subquality(const Allele &a) const;
+    long double lnsubquality(const Allele &a) const;
     //const int basesLeft(void) const; // returns the bases left within the read of the current position within the allele
     //const int basesRight(void) const; // returns the bases right within the read of the current position within the allele
     bool sameSample(Allele &other);  // if the other allele has the same sample as this one
