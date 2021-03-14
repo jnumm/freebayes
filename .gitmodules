@@ -10,3 +10,6 @@
 [submodule "contrib/htslib"]
 	path = contrib/htslib
 	url = https://github.com/samtools/htslib.git
+[submodule "ttmath"]
+	path = ttmath
+	url = https://gitea.ttmath.org/tomasz.sowa/ttmath.git

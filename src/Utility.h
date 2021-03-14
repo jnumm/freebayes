@@ -15,7 +15,7 @@
 #include <map>
 #include <time.h>
 #include "convert.h"
-#include "ttmath.h"
+#include <ttmath/ttmath.h>
 
 using namespace std;
 
