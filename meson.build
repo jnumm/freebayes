@@ -8,7 +8,7 @@
 
 project('freebayes', ['cpp', 'c'],
         version : '1.3.4',
-        default_options : ['warning_level=1', 'cpp_std=c++14', 'optimization=3'])
+        default_options : ['warning_level=3', 'cpp_std=c++14', 'optimization=3'])
 
 cc = meson.get_compiler('cpp')
 
@@ -186,9 +186,8 @@ incdir = include_directories(
     )
 
 extra_cpp_args = cc.get_supported_arguments(
-    '-fpermissive',
-    '-Wno-reorder',
     '-Wno-sign-compare',
+    '-Wno-unused-parameter',
     '-Wno-unused-variable',
     '-Wno-unused-but-set-variable',
     )
