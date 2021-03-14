@@ -122,12 +122,12 @@ public:
     int rank; // the rank of this data likelihood relative to others for the sample, 0 is best
     SampleDataLikelihood(string n, Sample* s, Genotype* g, long double p, int r)
         : name(n)
-        , sample(s)
         , genotype(g)
         , prob(p)
-        , rank(r)
         , marginal(0)
+        , sample(s)
         , hasObservations(true)
+        , rank(r)
     { }
 
     bool hasSupportingObservations(void) const {
@@ -183,12 +183,12 @@ public:
 
     GenotypeCombo(void)
         : probObsGivenGenotypes(0)
+        , permutationsln(0)
         , posteriorProb(0)
         , priorProb(0)
         , priorProbG_Af(0)
         , priorProbAf(0)
         , priorProbObservations(0)
-        , permutationsln(0)
     { }
 
     void init(bool useObsExpectations);

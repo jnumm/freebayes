@@ -113,8 +113,8 @@ public:
     string alt;
     string ref;
     AllelicPrimitive(string& r, string& a)
-	: ref(r)
-	, alt(a) { }
+	: alt(a)
+	, ref(r) { }
 };
 
 bool operator<(const AllelicPrimitive& a, const AllelicPrimitive& b);

@@ -16,19 +16,18 @@ class NonCall {
 public:
     NonCall(void)
         : refCount(0)
-        , reflnQ(0)
         , altCount(0)
-        , altlnQ(0)
         , minDepth(0)
         , nCount(0)
-
+        , reflnQ(0)
+        , altlnQ(0)
     { }
     NonCall(int rc, long double rq, int ac, long double aq, int mdp)
         : refCount(rc)
-        , reflnQ(rq)
         , altCount(ac)
-        , altlnQ(aq)
         , minDepth(mdp)
+        , reflnQ(rq)
+        , altlnQ(aq)
     { }
     int refCount;
     int altCount;
