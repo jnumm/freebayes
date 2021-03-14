@@ -106,7 +106,7 @@ void bestMarginalGenotypeCombo(GenotypeCombo& combo,
     for (SampleDataLikelihoods::iterator s = samples.begin(); s != samples.end(); ++s) {
         vector<SampleDataLikelihood>& sdls = *s;
         const string& name = sdls.front().name;
-        const map<Genotype*, long double>& marginals = results[name].marginals;;
+        const map<Genotype*, long double>& marginals = results[name].marginals;
         map<Genotype*, long double>::const_iterator m = marginals.begin();
         long double bestMarginalProb = m->second;
         Genotype* bestMarginalGenotype = m->first;

@@ -1620,7 +1620,7 @@ pair<int, int> alternateAndReferenceCount(vector<Allele*>& observations, string&
 
 void genotypeCombo2Map(GenotypeCombo& gc, GenotypeComboMap& gcm) {
     for (GenotypeCombo::iterator g = gc.begin(); g != gc.end(); ++g) {
-        gcm[(*g)->name] = *g;;
+        gcm[(*g)->name] = *g;
     }
 }
 

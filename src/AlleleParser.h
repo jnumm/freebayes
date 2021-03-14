@@ -340,7 +340,7 @@ private:
     long int currentSequenceStart;
 
     bool hasMoreAlignments;
-    bool hasMoreVariants;;
+    bool hasMoreVariants;
 
     bool oneSampleAnalysis; // if we are analyzing just one sample, and there are no specified read groups
 
